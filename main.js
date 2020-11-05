@@ -1,6 +1,9 @@
 const app = require('express')()
 const fetch = require('node-fetch');
+const cors = require('cors');
 const port = 3000
+
+app.use(cors())
 
 let data = [];
 fetch("https://api.themoviedb.org/3/movie/550?api_key=ac9072541cd6db7decca6d46df8c0034")
